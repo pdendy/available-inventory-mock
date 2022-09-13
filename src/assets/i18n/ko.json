@@ -1,0 +1,86 @@
+{
+  "Header": {
+    "Title": "Congo Seller Side Header",
+    "Location": "지역",
+    "en-US": "미국",
+    "en-GB": "영국",
+    "ja": "일본",
+    "es-MX": "멕시코",
+    "ko": "한국인",
+    "Home": "홈",
+    "CreateNewListing": "내 목록 만들기",
+    "Coupons": "쿠폰",
+    "Search": "내 목록 검색..."
+  },
+
+  "Categories": {
+    "Title": "카테고리",
+    "All": "모두",
+    "Automotive": "자동차",
+    "Beauty": "미용",
+    "Books": "서적",
+    "Clothing": "의류",
+    "Computers": "컴퓨터",
+    "Electronics": "전자제품",
+    "Games": "게임",
+    "Garden": "원예",
+    "Health": "건강",
+    "Industrial": "산업",
+    "Jewelry": "보석류",
+    "Movies": "영화",
+    "Outdoors": "야외",
+    "Sports": "스포츠",
+    "Tools": "도구"
+  },
+
+  "Home": {
+    "MyListings": "내 리스팅"
+  },
+
+  "Listing": {
+    "Edit": "편집하다",
+    "Delete": "삭제"
+  },
+  "Create-Listing": {
+    "Title": "목록 생성",
+    "ProductName": "상품명:",
+    "ProductPrice": "제품 가격:",
+    "ImageSource": "이미지 소스:",
+    "Language": "당신의 언어를 고르시 오",
+    "ListingLanguage": "목록 언어:",
+    "Brand": "상표:",
+    "AgeRange": "연령대:",
+    "ProductDescription": "제품 설명",
+    "ProductMaterial": "제품 소재",
+    "DimensionsDescription": "치수 설명",
+    "WeightDescription": "무게 설명",
+    "ReleaseDate": "출시일",
+    "SafetyInformation": "안전 정보",
+    "WarrantyInformation": "보증 정보",
+    "Submit": "제출하다",
+    "Spanish": "스페인의",
+    "EnglishUS": "영어(USA)",
+    "EnglishUK": "영어(UK)",
+    "Japanese": "일본어",
+    "Korean": "한국인",
+    "NoOptionSelected": "선택한 옵션 없음"
+  },
+  "Coupons": {
+    "CreateCoupon": "쿠폰 생성",
+    "Percent": "백분율",
+    "Dollar": "달러",
+    "Confirm": "확인",
+    "ManageCoupons": "쿠폰 관리",
+    "Active": "활성",
+    "Inactive": "비활성",
+    "CouponCode": "쿠폰 코드",
+    "DiscountAmount": "할인 량",
+    "Delete": "삭제",
+    "Cancel": "취소",
+    "AmountErrorMessage": "적절한 할인 금액을 입력하세요",
+    "CodeErrorMessage": "적절한 쿠폰 코드 입력"
+  },
+  "Footer": {
+    "BackToTop": "맨 위로"
+  }
+}

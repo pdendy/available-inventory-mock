@@ -1,0 +1,41 @@
+<!-- listing card container -->
+<article>
+   
+    <!-- listing image from database -->
+    <a routerLink="editListing">
+       <img src="{{ imageSrc }}" alt="{{ title }}">
+    </a>
+    <div class="text-and-buttons">
+             
+       <div class="text" >
+ 
+          <!-- listing title from database -->
+          <h2>{{ title }}</h2>
+ 
+          <!-- listing brand from database -->
+          <h3>{{ brand }}</h3>
+ 
+          <!-- listing categories from database -->
+          <h4>
+             <ng-container *ngIf="categories.length === 0">No Category</ng-container>
+             <ng-container *ngFor="let category of categories, let i = index">
+                {{ category.name }}<ng-container *ngIf="categories.length !== 0 && categories.length - 1 !== i">,&nbsp;</ng-container>
+             </ng-container>
+          </h4>
+ 
+          <!-- listing product group from database -->
+          <h5>{{ productGroup }}</h5>
+ 
+          <!-- listing price from database -->
+          <h4>${{ price.toFixed(2) }}</h4>
+ 
+          <!-- listing age range from database -->
+          <h5>{{ ageRange }}</h5>
+ 
+       </div>
+ 
+ 
+    </div>
+ 
+ </article>
+ 

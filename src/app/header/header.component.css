@@ -1,0 +1,108 @@
+/* container */
+header {
+    width: 100%;
+    border-radius: 0;
+    background-color: #B05200;
+    display: inline-flex;
+    padding: 1em 2.4em 0.6em 1em;
+  }
+  
+  /* header links */
+  header > a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.1s;
+  }
+  
+  header > a:hover {
+    color: #e2791d;
+  }
+  
+  /* logo container */
+  .logo {
+    margin: 0 1em 0 0.5em;
+  }
+  
+  /* logo */
+  a > img {
+    height: 2.5em;
+  }
+  
+  /* "Home" link */
+  .home {
+    margin: 0.8em 1.5em 0 0;
+  }
+  
+  /* "Create New Listing" link */
+  .newListing {
+    margin: 0.8em 1.5em 0 0;
+     min-width: 13em;
+  }
+  
+  /* "Create New Coupon" link */
+  .coupons {
+    margin: .75rem 1.25rem 0 0;
+    min-width: 6.25rem;
+  }
+  
+  /* "Account Settings (gear icon)" link */
+  .accountSettings {
+    margin-top: 0.8em;
+    margin-right: 2em;
+  }
+  
+  /* category select dropdown */
+  ::ng-deep .categorySelect {
+    background-color: #cccccc;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    height: 2.65em;
+  }
+  
+  /* search field */
+  header > input {
+    text-align: right;
+    width: 100%;
+    color: black;
+    font-size: 16px;
+    height: 2.65em;
+    border-radius: 0;
+    padding-right: 1em;
+  }
+  
+  /* search button */
+  ::ng-deep .search {
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #1D86E2;
+    margin-right: 1.5em;
+  }
+  
+  /* country select dropdown */
+  aside {
+    float: right;
+  }
+  
+  /* selected option in dropdown */
+  .currentCountry {
+    display: inline-flex;
+    min-width: 20em;
+  }
+  
+  /* selected option text */
+  .countryName {
+    color: white;
+    min-width: 10em;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* flag image */
+  .flag {
+    width: 1.5em;
+    margin-right: 0.8em;
+  }
+  

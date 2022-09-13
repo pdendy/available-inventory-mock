@@ -1,0 +1,93 @@
+{
+  "Header": {
+    "Title": "Congo Seller Side Header",
+    "Location": "Select location",
+    "en-US": "United States",
+    "en-GB": "Great Britain",
+    "ja": "Japan",
+    "es-MX": "Mexico",
+    "ko": "Korean",
+    "Home": "Home",
+    "CreateNewListing": "Create New Listing",
+    "Search": "Search my listings...",
+    "Coupons": "Coupons"
+  },
+
+  "Categories": {
+    "Title": "Categories",
+    "All": "All",
+    "Automotive": "Automotive",
+    "Beauty": "Beauty",
+    "Books": "Books",
+    "Clothing": "Clothing",
+    "Computers": "Computers",
+    "Electronics": "Electronics",
+    "Games": "Games",
+    "Garden": "Garden",
+    "Health": "Health",
+    "Industrial": "Industrial",
+    "Jewelry": "Jewelry",
+    "Movies": "Movies",
+    "Outdoors": "Outdoors",
+    "Sports": "Sports",
+    "Tools": "Tools"
+  },
+
+  "Home": {
+    "MyListings": "My Listings"
+  },
+
+  "Listing": {
+    "Edit": "Edit",
+    "Delete": "Delete"
+  },
+
+  "Create-Listing": {
+    "Title": "Create Listing",
+    "ProductName": "Product Name",
+    "ProductPrice": "Product Price",
+    "ImageSource": "Image Source",
+    "Language": "Choose Your Language",
+    "ListingLanguage": "Listing Language",
+    "Brand": "Brand",
+    "AgeRange": "Age Range",
+    "ProductDescription": "Product Description",
+    "ProductMaterial": "Product Material",
+    "DimensionsDescription": "Dimensions Description",
+    "WeightDescription": "Weight Description",
+    "ReleaseDate": "Release Date",
+    "SafetyInformation": "Safety Information",
+    "WarrantyInformation": "Warranty Information",
+    "Submit": "Submit",
+    "Spanish": "Spanish",
+    "EnglishUS": "English(USA)",
+    "EnglishUK": "English(UK)",
+    "Japanese": "Japanese",
+    "Korean": "Korean",
+    "NoOptionSelected": "No Option Selected"
+  },
+
+  "Coupons": {
+    "CreateCoupon": "Create Coupon",
+    "Percent": "Percent",
+    "Dollar": "Dollar",
+    "Confirm": "Confirm",
+    "ManageCoupons": "Manage Coupons",
+    "Active": "Active",
+    "Inactive": "Inactive",
+    "CouponCode": "Coupon Code",
+    "DiscountAmount": "Discount Amount",
+    "Delete": "Delete",
+    "Cancel": "Cancel",
+    "AmountErrorMessage": "Enter proper discount amount",
+    "CodeErrorMessage": "Enter proper coupon code"
+  },
+
+  "Account-Settings": {
+    "Title": "Account Settings"
+  },
+
+  "Footer": {
+    "BackToTop": "Back To Top"
+  }
+}

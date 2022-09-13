@@ -1,0 +1,37 @@
+/* container */
+footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-color: #B05200;
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+/* "Back To Top" link */
+footer > a:first-of-type {
+  display: block;
+  background-color: #DC6700;
+  font-weight: bold;
+  color: white;
+  padding: 0.86em 0;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color .1s;
+}
+
+footer > a:first-of-type:hover {
+  color: #e2791d;
+}
+
+/* logo bar with link */
+footer > a:last-of-type {
+  display: block;
+  padding: 1em 0 0.85em 0;
+  border-bottom: solid 30px #693100;
+}
+
+/* logo */
+img {
+  height: 2.5em;
+}

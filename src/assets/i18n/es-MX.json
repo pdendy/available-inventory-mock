@@ -1,0 +1,88 @@
+{
+  "Header": {
+    "Title": "Congo Encabezado del lado del vendedor",
+    "Location": "Seleccionar Ubicación",
+    "en-US": "Estados Unidos",
+    "en-GB": "Gran Bretaña",
+    "ja": "Japón",
+    "es-MX": "México",
+    "ko": "Coreano",
+    "Home": "Hogar",
+    "CreateNewListing": "Crear Nueva Lista",
+    "Coupons": "Cupones",
+    "Search": "Búsqueda..."
+  },
+
+  "Categories": {
+    "Title": "Categorías",
+    "All": "Todos",
+    "Automotive": "Automoción",
+    "Beauty": "Belleza",
+    "Books": "Libros",
+    "Clothing": "Ropa",
+    "Computers": "Computadoras",
+    "Electronics": "Electrónica",
+    "Games": "Juegos",
+    "Garden": "Jardín",
+    "Health": "Salud",
+    "Industrial": "Industrial",
+    "Jewelry": "Joyería",
+    "Movies": "Películas",
+    "Outdoors": "Afuera",
+    "Sports": "Deportes",
+    "Tools": "Herramientas"
+  },
+
+  "Home": {
+    "MyListings": "Mis Listados"
+  },
+
+  "Listing": {
+    "Edit": "Editar",
+    "Delete": "Borrar"
+  },
+  "Create-Listing": {
+    "Title": "Crear listado",
+
+    "ProductName": "nombre del producto:",
+    "ProductPrice": "Precio:",
+    "ImageSource": "Fuente de imagen:",
+    "Language": "Elige tu idioma",
+    "ListingLanguage": "Idioma del listado:",
+    "Brand": "Marca:",
+    "AgeRange": "Rango de edad",
+    "ProductDescription": "Descripción del producto",
+    "ProductMaterial": "Material del producto",
+    "DimensionsDescription": "Dimensiones Descripción",
+    "WeightDescription": "Peso Descripción",
+    "ReleaseDate": "Fecha de lanzamiento",
+    "SafetyInformation": "Información de seguridad",
+    "WarrantyInformation": "Información de garantía",
+    "Submit": "Enviar",
+    "Spanish": "Espanol",
+    "EnglishUS": "Ingles(USA)",
+    "EnglishUK": "Ingles(UK)",
+    "Japanese": "Japones",
+    "Korean": "Coreano",
+    "NoOptionSelected": "Ninguna opción seleccionada"
+  },
+  "Coupons": {
+    "CreateCoupon": "Crear Cupones",
+    "Percent": "Por Ciento",
+    "Dollar": "Dólar",
+    "Confirm": "Confirmar",
+    "ManageCoupons": "Administrar cupones",
+    "Active": "Activo",
+    "Inactive": "Inactivo",
+    "CouponCode": "Código promocional",
+    "DiscountAmount": "Importe de descuento",
+    "Delete": "Borrar",
+    "Cancel": "Cancelar",
+    "AmountErrorMessage": "Ingrese la cantidad de descuento adecuada",
+    "CodeErrorMessage": "Ingrese el código de cupón adecuado"
+  },
+
+  "Footer": {
+    "BackToTop": "Volver Arriba"
+  }
+}

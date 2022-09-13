@@ -1,0 +1,58 @@
+<!-- container for header component -->
+<header>
+<!-- logo with link to Home component -->
+<a [routerLink]="['']" class="logo">
+    <img src="../../assets/images/congo-logo.png" alt="Congo Logo" />
+</a>
+
+<a [routerLink]="['']" class="home">{{ "Header.Home" }}</a>
+
+  <!-- Category select for search -->
+  <p-dropdown
+    styleClass="categorySelect"
+    [(ngModel)]="selectedCategory"
+  >
+    <ng-template pTemplate="item" let-item>
+      {{ item.name }}
+    </ng-template>
+    <ng-template pTemplate="selectedItem" let-item>
+      {{ item.name }}
+    </ng-template>
+  </p-dropdown>
+
+  <!-- country select dropdown -->
+  <aside>
+    <p-dropdown
+      [style]="{
+        height: '2.4em',
+        width: '13em',
+        'background-color': '#e2791d',
+        border: 'none'
+      }"
+      [(ngModel)]="selected"
+      optionLabel="name"
+    >
+      <!-- selected option -->
+      <ng-template pTemplate="selectedItem">
+        <div class="currentCountry" *ngIf="selected">
+          <img
+            class="flag"
+            src="../../assets/images/flags/{{ selected.code }}.svg"
+          />
+          <div class="countryName">{{ selected.name }}</div>
+        </div>
+      </ng-template>
+
+      <!-- option within dropdown -->
+      <ng-template let-country pTemplate="item">
+        <div>
+          <img class="flag" src="../../assets/images/flags/{{ country.code }}.svg" />
+          {{ country.name }}
+        </div>
+      </ng-template>
+
+    </p-dropdown>
+
+  </aside>
+
+</header>

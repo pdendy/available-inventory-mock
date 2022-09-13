@@ -1,0 +1,87 @@
+{
+  "Header": {
+    "Title": "Congo 売り手側ヘッダー",
+    "Location": "場所を選択",
+    "en-US": "アメリカ",
+    "en-GB": "イギリス",
+    "ja": "日本",
+    "es-MX": "メキシコ",
+    "ko": "韓国語",
+    "Home": "家",
+    "CreateNewListing": "新しいリストを作成する",
+    "Coupons": "クーポン",
+    "Search": "私のリストを検索..."
+  },
+
+  "Categories": {
+    "Title": "カテゴリ",
+    "All": "全て",
+    "Automotive": "自動車",
+    "Beauty": "美容",
+    "Books": "書籍",
+    "Clothing": "衣類",
+    "Computers": "コンピューター",
+    "Electronics": "電子機器",
+    "Games": "名前",
+    "Garden": "ガーデン",
+    "Health": "健康",
+    "Industrial": "生産l",
+    "Jewelry": "宝石類",
+    "Movies": "映画",
+    "Outdoors": "アウトドア",
+    "Sports": "スポーツ",
+    "Tools": "工具"
+  },
+
+  "Home": {
+    "MyListings": "マイ・リスティング"
+  },
+
+  "Listing": {
+    "Edit": "編集",
+    "Delete": "消去"
+  },
+
+  "Create-Listing": {
+    "Title": "リストを作成する:",
+    "ProductName": "商品名:",
+    "ProductPrice": "商品価格:",
+    "ImageSource": "画像ソース:",
+    "Language": "言語を選択してください:",
+    "ListingLanguage": "出品言語:",
+    "Brand": "ブランド:",
+    "AgeRange": "年齢層:",
+    "ProductDescription": "製品説明",
+    "ProductMaterial": "製品素材",
+    "DimensionsDescription": "寸法 説明",
+    "WeightDescription": "重量の説明",
+    "ReleaseDate": "発売日",
+    "SafetyInformation": "安全情報",
+    "WarrantyInformation": "保証情報",
+    "Submit": "送信",
+    "Spanish": "スペイン語",
+    "EnglishUS": "英語(USA)",
+    "EnglishUK": "英語(UK)",
+    "Japanese": "日本",
+    "Korean": "韓国語",
+    "NoOptionSelected": "オプションが選択されていません"
+  },
+  "Coupons": {
+    "CreateCoupon": "クーポンの作成",
+    "Percent": "パーセント",
+    "Dollar": "ドル",
+    "Confirm": " 確認する",
+    "ManageCoupons": "クーポンの管理",
+    "Active": "能動",
+    "Inactive": "不活発な",
+    "CouponCode": "クーポンコード",
+    "DiscountAmount": "割引額",
+    "Delete": "削除",
+    "Cancel": "キャンセル",
+    "AmountErrorMessage": "適切な割引額を入力してください",
+    "CodeErrorMessage": "適切なクーポンコードを入力してください"
+  },
+  "Footer": {
+    "BackToTop": "トップに戻る"
+  }
+}
