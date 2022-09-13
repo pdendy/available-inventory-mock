@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AvailableInventoryComponent } from './available-inventory/available-inventory.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 const routes: Routes = [
   {
@@ -9,8 +9,8 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'availableInventory',
-    component: AvailableInventoryComponent,
+    path: 'inventory',
+    component: InventoryComponent,
   }
 ];
 

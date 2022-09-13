@@ -1,17 +1,19 @@
 <!-- container for header component -->
 <header>
-<!-- logo with link to Home component -->
-<a [routerLink]="['']" class="logo">
+  <!-- logo with link to Home component -->
+  <a [routerLink]="['']" class="logo">
     <img src="../../assets/images/congo-logo.png" alt="Congo Logo" />
-</a>
+  </a>
 
-<a [routerLink]="['']" class="home">{{ "Header.Home" }}</a>
+  <a [routerLink]="['']" class="home">{{ "Home" }}</a>
+
+  <!-- View Inventory -->
+  <a [routerLink]="['inventory']" class="Inventory">
+    {{"Inventory"}}
+  </a>
 
   <!-- Category select for search -->
-  <p-dropdown
-    styleClass="categorySelect"
-    [(ngModel)]="selectedCategory"
-  >
+  <p-dropdown styleClass="categorySelect" [(ngModel)]="selectedCategory">
     <ng-template pTemplate="item" let-item>
       {{ item.name }}
     </ng-template>
@@ -46,13 +48,13 @@
       <!-- option within dropdown -->
       <ng-template let-country pTemplate="item">
         <div>
-          <img class="flag" src="../../assets/images/flags/{{ country.code }}.svg" />
+          <img
+            class="flag"
+            src="../../assets/images/flags/{{ country.code }}.svg"
+          />
           {{ country.name }}
         </div>
       </ng-template>
-
     </p-dropdown>
-
   </aside>
-
 </header>

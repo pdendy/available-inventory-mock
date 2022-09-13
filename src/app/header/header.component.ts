@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit {
     // });
   }
 
-   // function for changing overall site language when you select a seller
+  // function for changing overall site language when you select a seller
   //  public selectLanguage(event: any){
   //   this.translateService.use(event.value.code);
 
