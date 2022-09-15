@@ -14,18 +14,33 @@ import { InventoryService } from '../services/inventory.service';
 })
 export class InventoryComponent implements OnInit {
 
- // listings: Listing[];
- // listingDetails: ListingDetails[];
-  //listingVariation: ListingVariation[];
+  inventory = [
+    {
+      id: 1,
+      title: "Body Wash",
+      details: "for showering I guess",
+      quantity: 20
+    },
+    {
+      id: 2,
+      title: "Shampoo",
+      details: "for showering I guess",
+      quantity: 30
+    },
+    {
+      id: 3,
+      title: "Conditioner",
+      details: "for showering I guess",
+      quantity: 40
+    }
+  ];
 
   first = 0;
   rows = 10;
 
   constructor(private InventoryService: InventoryService) { }
 
-  ngOnInit(): void {
-    //this.availableInventoryService.getListings()TouchEvent(data => this.listings = data);
-  }
+  ngOnInit(): void { }
 
   next() {
     this.first = this.first + this.rows;
@@ -46,6 +61,5 @@ export class InventoryComponent implements OnInit {
   // isFirstPage(): boolean {
   //   return this.listings ? this.first === 0 : true;
   // }
-
 
 }

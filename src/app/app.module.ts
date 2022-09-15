@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ListingComponent } from './listing/listing.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { ListingComponent } from './listing/listing.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     NgIf,
@@ -37,7 +40,8 @@ import { ListingComponent } from './listing/listing.component';
     ReactiveFormsModule,
     CheckboxModule,
     MessagesModule,
-    MessageModule
+    MessageModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent], 
