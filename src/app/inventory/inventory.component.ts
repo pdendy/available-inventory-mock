@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TableModule } from 'primeng/table';
 
 import { Listing } from '../models/listing.model';
 import { ListingDetails } from '../models/listing-details.model';
