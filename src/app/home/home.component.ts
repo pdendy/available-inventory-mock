@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from '../models/todo.model';
+import { TodoService } from '../services/todo.mock.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  todos: Todo[];
 
-  ngOnInit(): void {
+  constructor(private todoService: TodoService) { }
+
+  ngOnInit() {
+    this.todoService
+      .getTodos()
+      .subscribe((todos) => this.todos = todos);
   }
 
 }

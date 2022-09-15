@@ -16,6 +16,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ListingComponent } from './listing/listing.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { ListingComponent } from './listing/listing.component';
     MessagesModule,
     MessageModule
   ],
-  providers: [],
+  providers: [
+    ...environment.providers
+  ],
   bootstrap: [AppComponent], 
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
