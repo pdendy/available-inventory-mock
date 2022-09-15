@@ -11,6 +11,34 @@
   <!-- Displays either Home component or Create Listing component when navigated to -->
   <router-outlet></router-outlet>
   
+  <h1>Insurance Policies with Angular 13 example</h1>
+  <table style="width:100%">
+    <tr>
+      <th>Policy Number</th>
+      <th>Amount</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let policy of policies" >
+      <td>{{ policy.num }}</td>
+      <td>{{ policy.amount }}</td>
+      <td>{{ policy.description }}</td>
+  
+      <td>
+      <button (click)="deletePolicy(policy.id)">Delete</button>
+      <button (click)="updatePolicy(policy)">Update</button>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
 </main>
 
 <!-- Footer component with "Back to top..." option, possibly other links and copyright information -->

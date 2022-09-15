@@ -17,6 +17,9 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ListingComponent } from './listing/listing.component';
 import { environment } from 'src/environments/environment';
+//doug's experiments
+import { InMemoryDbService, InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { environment } from 'src/environments/environment';
     ReactiveFormsModule,
     CheckboxModule,
     MessagesModule,
-    MessageModule
+    MessageModule,
+    //doug's experiments:
+    InMemoryWebApiModule.forRoot(DataService)
   ],
   providers: [
     ...environment.providers
