@@ -18,6 +18,7 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ListingComponent } from './listing/listing.component';
 import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { TableModule } from 'primeng/table';
     CheckboxModule,
     MessagesModule,
     MessageModule,
-    TableModule
+    TableModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent], 

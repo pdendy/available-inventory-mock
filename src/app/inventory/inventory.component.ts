@@ -62,4 +62,8 @@ export class InventoryComponent implements OnInit {
   //   return this.listings ? this.first === 0 : true;
   // }
 
+  edit() {
+
+  }
+
 }

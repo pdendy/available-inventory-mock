@@ -13,6 +13,7 @@
           <th>Title</th>
           <th>Details</th>
           <th>Quantity</th>
+          <th></th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-item>
@@ -21,6 +22,7 @@
           <td>{{item.title}}</td>
           <td>{{item.details}}</td>
           <td>{{item.quantity}}</td>
+          <td><p-button label="Edit quantity" (onClick)="edit()"></p-button></td>
         </tr>
       </ng-template>
       <ng-template pTemplate="paginatorleft">
