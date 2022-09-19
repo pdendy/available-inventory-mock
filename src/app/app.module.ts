@@ -10,7 +10,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
 import { InventoryComponent } from './inventory/inventory.component';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { NgForOf, NgIf } from '@angular/common';
 import { InputTextModule } from "primeng/inputtext";
 import { CheckboxModule } from 'primeng/checkbox';
@@ -19,6 +19,8 @@ import { MessageModule } from 'primeng/message';
 import { ListingComponent } from './listing/listing.component';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { ButtonModule } from 'primeng/button';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     NgIf,
     NgForOf,
@@ -43,9 +46,13 @@ import { ButtonModule } from 'primeng/button';
     MessagesModule,
     MessageModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    
   ],
-  providers: [],
+  providers: [
+    MessageService, 
+    ConfirmationService, 
+  ],
   bootstrap: [AppComponent], 
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

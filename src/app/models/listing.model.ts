@@ -6,6 +6,7 @@ import { Seller } from "./seller.model";
 
 export class Listing {
 
+    id: string;
     title: string;
     price: number;
     imageSrc: string;
@@ -13,12 +14,14 @@ export class Listing {
     brand: string;
     ageRange: string;
     details: ListingDetails;
+    quantity: number;
     seller: Seller;
     categories: Category[];
     country?: Country;
     variants?: ListingVariation[];
 
     constructor(
+                id: string,
                 title: string,
                 imageSrc: string,
                 price: number,
@@ -26,11 +29,13 @@ export class Listing {
                 brand: string,
                 ageRange: string,
                 details: ListingDetails,
+                quantity: number,
                 seller: Seller,
                 categories: Category[],
                 country?: Country,
                 variants?: ListingVariation[]) {
-
+                    
+        this.id = id;
         this.title = title;
         this.imageSrc = imageSrc;
         this.price = price;
@@ -38,6 +43,7 @@ export class Listing {
         this.brand = brand;
         this.ageRange = ageRange;
         this.details = details;
+        this.quantity = quantity;
         this.seller = seller;
         this.categories = categories;
         this.country = country;
