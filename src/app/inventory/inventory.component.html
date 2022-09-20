@@ -4,6 +4,7 @@
   <div class="card">
     <p-table
       [value]="inventory"
+      styleClass="p-datatable-gridlines"
       [paginator]="true"
       [rows]="10"
       [showCurrentPageReport]="true"
@@ -18,19 +19,19 @@
       </ng-template>
       <ng-template pTemplate="header">
         <tr>
-          <th pSortableColumn="title">
+          <th pSortableColumn="title" styleClass="col2">
             Title<p-sortIcon field="title"></p-sortIcon>
           </th>
-          <th pSortableColumn="details">
+          <th pSortableColumn="details" styleClass="col2">
             Details<p-sortIcon field="details"></p-sortIcon>
           </th>
-          <th pSortableColumn="category">
+          <th pSortableColumn="category" styleClass="col-2">
             Category<p-sortIcon field="category"></p-sortIcon>
           </th>
-          <th pSortableColumn="quantity">
+          <th pSortableColumn="quantity" styleClass="col-2">
             Quantity<p-sortIcon field="quantity"></p-sortIcon>
           </th>
-        <th></th>
+        <!-- <th>Action</th> -->
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-listing>
@@ -38,11 +39,21 @@
           <td>{{ listing.title }}</td>
           <td>{{ listing.details }}</td>
           <td>{{ listing.category }}</td>
-          <td>{{ listing.quantity }}</td>
-          <td>
-            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editListing(listing)"></button>
-            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteListing(listing)"></button>
+          <td pEditableColumn>
+            <p-cellEditor>
+                <ng-template pTemplate="input">
+                    <input pInputText type="text" [(ngModel)]="listing.quantity">
+                </ng-template>
+                <ng-template pTemplate="output">
+                    {{listing.quantity}}
+                </ng-template>
+            </p-cellEditor>
         </td>
+        <!-- <td style="text-align:center"> -->
+          <!-- <button *ngIf="!editing" pButton pRipple type="button" pInitEditableRow icon="pi pi-pencil" (click)="onQuantitytEditInit(listing)" class="p-button-rounded p-button-text"></button> -->
+          <!-- <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow icon="pi pi-check" (click)="onQuantityEditSave(listing)" class="p-button-rounded p-button-text p-button-success mr-2"></button> -->
+          <!-- <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow icon="pi pi-times" (click)="onQuantityEditCancel(listing, id)" class="p-button-rounded p-button-text p-button-danger"></button> -->
+      <!-- </td> -->
         </tr>
       </ng-template>
       <ng-template pTemplate="paginatorleft">
@@ -63,7 +74,7 @@
   </div>
 </div>
 
-<p-dialog
+<!-- <p-dialog
   (visible)="listingDialog"
   [style]="{ width: '450px' }"
   header="Listing Details"
@@ -115,4 +126,4 @@
   
 </p-dialog>
 
-<p-confirmDialog style="width: 450px" header="Confirmation"></p-confirmDialog>
+<p-confirmDialog style="width: 450px" header="Confirmation"></p-confirmDialog> -->

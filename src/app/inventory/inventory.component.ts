@@ -1,30 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { TableModule } from 'primeng/table';
 
 import { Listing } from '../models/listing.model';
 import { ListingDetails } from '../models/listing-details.model';
 import { ListingVariation } from '../models/listing-variation.model';
-import { ListingComponent } from '../listing/listing.component';
 import { InventoryService } from '../services/inventory.service';
-import { ConfirmationService, MessageService } from 'primeng/api';
+import { SelectItem } from 'primeng/api';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-inventory',
   templateUrl: './inventory.component.html',
   styleUrls: ['./inventory.component.css'],
   providers: [
-    MessageService,
-    ConfirmationService,
-    // {
-    //   provide: NG_VALUE_ACCESSOR,
-    //   useExisting: forwardRef(() => InventoryComponent),  // replace name as appropriate
-    //   multi: true
-    // }
+    MessageService
   ]
 })
 export class InventoryComponent implements OnInit {
-
-  listingDialog!: boolean;
 
   listings!: Listing[];
 
@@ -32,28 +23,33 @@ export class InventoryComponent implements OnInit {
 
   selectedListing!: Listing[];
 
-  submitted!: boolean;
+  clonedListings: { [s: string]: Listing;} = {};
 
   inventory = [
     {
       id: 1,
       title: "Body Wash",
-      details: "for showering I guess",
+      details: "moisturizing and exfoliating body wash",
+      category: 'Health',
       quantity: 20
     },
     {
       id: 2,
       title: "Shampoo",
-      details: "for showering I guess",
+      details: "all natural conditioning shampoo",
+      category: 'Hair Care',
       quantity: 30
     },
     {
       id: 3,
       title: "Conditioner",
-      details: "for showering I guess",
+      details: "leave-in conditioner",
+      category: 'Hair Care',
       quantity: 40
     }
   ];
+
+  editing!: boolean;
 
   first = 0;
   rows = 10;
@@ -61,23 +57,12 @@ export class InventoryComponent implements OnInit {
   constructor(
     private inventoryService: InventoryService, 
     private messageService: MessageService,
-    private confirmationService: ConfirmationService
-      // title: string,
-      // price: number,
-      // details: ListingDetails,
-      // quantity: number,
-      // categories: Category[]
       ) {
-        // this.title = title;
-        // this.price = price;
-        // this.details = details;
-        // this.quantity = quantity;
-        // this.categories = categories;
     }
 
   ngOnInit() {
     //this.inventoryService.getListings().then(data => this.listings = data);
-
+    this.inventoryService.getListings().then(data => this.listings = data);
    }
 
   next() {
@@ -100,62 +85,23 @@ export class InventoryComponent implements OnInit {
     return this.listings ? this.first === 0 : true;
   }
 
-  openNew() {
-    //this.listing = {};
-    this.submitted = false;
-    this.listingDialog = true;
+  onQuantitytEditInit(listing: Listing){
+    this.clonedListings[listing.id] = {...listing};
   }
 
-  editListing(listing: Listing) {
-    console.log("Edit button works.");
-
-    this.listing = {...listing};
-    this.listingDialog = true;
-  }
-
-  deleteListing(listing: Listing) {
-    
-    this.confirmationService.confirm({
-        message: 'Are you sure you want to delete ' + listing.title + '?',
-        header: 'Confirm',
-        icon: 'pi pi-exclamation-triangle',
-        accept: () => {
-          console.log("Delete button works.");
-            this.listings = this.listings.filter(val => val.id !== listing.id);
-            //this.listing = {};
-            this.messageService.add({severity:'success', summary: 'Successful', detail: 'Listing Deleted', life: 3000});
-       
-          } 
-    });
-  } 
-
-  hideDialog() {
-    this.listingDialog = false;
-    this.submitted = false;
-  }
-
-  saveListing() {
-    this.submitted = true;
-        if (this.listing.id) {
-            this.listings[this.findIndexById(this.listing.id)] = this.listing;
-            this.messageService.add({severity:'success', summary: 'Successful', detail: 'Listing Updated', life: 3000});
-        }
-        else {        
-          this.listing = this.listing;
-          this.listingDialog = false;
-          //this.listing = {};
-        }
-  }
-
-  findIndexById(id: string): number {
-    let index = -1;
-    for (let i = 0; i < this.listings.length; i++) {
-        if (this.listings[i].id === id) {
-            index = i;
-            break;
-        }
+  onQuantityEditSave(listing: Listing){
+    if (listing.quantity > 0) {
+      delete this.clonedListings[listing.id];
+      this.messageService.add({severity:'success', summary:'Success', detail: 'Listing is updated.'});
     }
+    else {
+      this.messageService.add({severity:'error', summary:'Error', detail:'Invalid Quantity'});
+    }
+  }
 
-    return index;
-}
+  // onQuantityEditCancel(listing: Listing, index: number){
+  //   this.listing[index] = this.clonedListings[listing.id];
+  //   delete this.clonedListings[listing.id];
+  // }
+
 }

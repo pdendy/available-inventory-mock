@@ -21,6 +21,10 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { HttpClientModule} from '@angular/common/http';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+
+import { InMemoryDataService } from './services/in-memory-data-service.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,7 @@ import { HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
     FormsModule,
     NgIf,
     NgForOf,
@@ -47,7 +52,7 @@ import { HttpClientModule} from '@angular/common/http';
     MessageModule,
     TableModule,
     ButtonModule,
-    
+    ConfirmDialogModule
   ],
   providers: [
     MessageService, 

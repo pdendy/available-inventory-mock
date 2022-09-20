@@ -5,7 +5,7 @@
 export const environment = {
   production: false
 
-  // LISTINGS_URI: '',
+  //LISTINGS_URI: '',
 
   // CATEGORIES_URI: '',
 

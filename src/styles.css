@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0em;
+    padding: 0em;
+    border: 0em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header component */
+app-header {
+    display: block;
+}
+
+/* container for Categories component and router outlet */
+/* main {
+    display: flex;
+} */
+
+/* guarantees at least a three column display */
+app-header, main, app-footer {
+    min-width: 100em;
+}
+
+body {
+    background-color: hsl(0, 0%, 94%)
+  }
+
+.title{
+    display: flex;
+    margin: 2rem auto 2rem;
+    padding: 0rem 1rem;
+    max-width: 60rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
+    height: 1em;
+    margin-bottom: 1.5em;
+}
+

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Listing } from '../models/listing.model';
+import { environment } from 'src/environments/environment';
+
 // import { environment } from '../environment';
 
 @Injectable({
@@ -9,29 +11,27 @@ import { Listing } from '../models/listing.model';
 })
 export class InventoryService {
 
-  //url: string = environment.LISTINGS_URI;
+  url: string = environment.LISTINGS_URI;
 
   constructor(
     private http: HttpClient
-    ) { }
+  ) { }
 
-    // getListings() {
-    //   return this.http.get<any>('assets/showcase/data/listings.json')
-    //   .toPromise()
-    //   .then(res => <Listing[]>res.data)
-    //   .then(data => { return data; });
-  //}
-  
-  // generateName() {
-  //   return this.[Math.floor(Math.random() * Math.floor(30))];
-  // }
-
-  generatePrice() {
-    return Math.floor(Math.random() * Math.floor(299)+1);
+  getListings() {
+      return this.http.get<any>('assets/showcase/data/listings.json')
+      .toPromise()
+      .then(res => <Listing[]>res.data)
+      .then(data => { return data; });
   }
 
-  generateQuantity() {
-    return Math.floor(Math.random() * Math.floor(75)+1);
+  getListing(id: string): Observable<Listing>{
+    let url = `${this.url}/${id}`;
+    return this.http.get<Listing>(url);
+  }
+
+  editQuantity(listing: Listing): Observable<Listing>{
+    let url = `${this.url}/${listing.id}`;
+    return this.http.put<Listing>(url, listing);
   }
 
 }
