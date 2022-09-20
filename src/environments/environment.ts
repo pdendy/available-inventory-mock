@@ -3,9 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
 
-  //LISTINGS_URI: '',
+  LISTINGS_URI: 'congo-seller-server.database.windows.net'
 
   // CATEGORIES_URI: '',
 
